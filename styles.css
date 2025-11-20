@@ -1,0 +1,169 @@
+:root {
+    --yellow: #f7d26a;
+    --yellow-light: #ffefb0;
+    --text: #3b3b3b;
+    --font-main: "Poppins", sans-serif;
+    --font-script: "Great Vibes", cursive;
+    --font-title: "Playfair Display", serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    background: linear-gradient(135deg, #fff7d9, #ffeebe);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(255,218,92,0.23) 1px, transparent 1px);
+    background-size: 18px 18px;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #ffeebb, #fff1c1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 242, 190, 0.5), rgba(255, 230, 160, 0.5));
+    z-index: 0;
+}
+
+.hero-img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--yellow);
+    z-index: 1;
+}
+
+.hero-hearts {
+    font-size: 2rem;
+    margin-top: 15px;
+    z-index: 1;
+}
+
+.letter-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.letter-toggle {
+    background: var(--yellow);
+    padding: 12px 20px;
+    color: white;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.letter-checkbox {
+    display: none;
+}
+
+.folded-letter {
+    max-width: 650px;
+    margin: 25px auto;
+    background: #fffef7;
+    border: 2px solid #e6c56d;
+    border-radius: 12px;
+    padding: 35px;
+    transform: scaleY(0.3);
+    transform-origin: top;
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.letter-checkbox:checked ~ .folded-letter {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.letter-inner {
+    text-align: left;
+}
+
+.letter-title {
+    font-family: var(--font-script);
+    font-size: 2.4rem;
+    color: #d4ae45;
+    margin-bottom: 20px;
+}
+
+.letter-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+.letter-sign {
+    margin-top: 30px;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.signature {
+    font-family: var(--font-script);
+    font-size: 2rem;
+}
+
+
+.gallery-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 180px); 
+    grid-auto-flow: column; 
+    height: calc(2 * 180px + 40px); 
+    row-gap: 220px;    
+    column-gap: 20px; 
+}
+
+
+.gallery-grid img {
+    width: 97%;
+    height: 210%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.reasons-section {
+    padding: 500px 40px 60px 30px;
+    text-align: center;
+}
+
+.reasons-container {
+    display: grid;
+    gap: 15px;
+}
+
+.reason-card {
+    background: white;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    font-size: 1.1rem;
+}
+
+.reason-desc {
+    font-size: .9rem;
+    color: #555;
+    display: block;
+    margin-top: 5px;
+}
